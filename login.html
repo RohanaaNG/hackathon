@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS Styles */
+        body {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .form {
+            text-align: center;
+        }
+
+        .inputbox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #0cc0df;
+        }
+
+        span {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            transition: top 0.3s, font-size 0.3s, color 0.3s;
+        }
+
+        input:focus + span,
+        input:valid + span {
+            top: -10px;
+            font-size: 12px;
+            color: #0cc0df;
+        }
+
+        a {
+            display: inline-block;
+            background: linear-gradient(45deg, #0cc0df, #09a6b1);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        a:hover {
+            background: linear-gradient(45deg, #09a6b1, #0cc0df);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="form">
+            <h2>Login Form</h2>
+            <form id="loginForm">
+                <div class="inputbox">
+                    <input type="email" id="email" required>
+                    <span>E-mail</span>
+                </div>
+                <div class="inputbox">
+                    <input type="password" id="password" required>
+                    <span>Password</span>
+                </div>
+                <a href="hackathon/hackathon/index.html">Submit</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
