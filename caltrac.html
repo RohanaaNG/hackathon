@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Tracker</title>
+  <link rel="stylesheet" href="cal.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Calorie Tracker</h1>
+    <div class="main-section">
+      <div class="meal-tracker section">
+        <h2>Consumed Meals</h2>
+        <ul id="consumed-meals" class="meals-list">
+          <!-- Consumed meal items will be added dynamically -->
+        </ul>
+      </div>
+      <div class="summary-section section">
+        <h2>Daily Summary</h2>
+        <div id="summary">
+          <!-- Daily summary details will be displayed here -->
+        </div>
+        <div id="warning" class="warning"></div>
+        <div class="chart-section">
+          <canvas id="intake-chart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="input-fields section">
+      <form id="meal-form">
+        <label for="meal-description">Meal Description:</label>
+        <input type="text" id="meal-description" placeholder="Enter meal description">
+        <label for="calories">Calories:</label>
+        <input type="number" id="calories" placeholder="Enter calories">
+        <label for="protein">Protein (g):</label>
+        <input type="number" id="protein" placeholder="Enter protein">
+        <label for="carbs">Carbs (g):</label>
+        <input type="number" id="carbs" placeholder="Enter carbs">
+        <label for="fats">Fats (g):</label>
+        <input type="number" id="fats" placeholder="Enter fats">
+        <label for="daily-limit">Daily Calorie Limit:</label>
+        <input type="number" id="daily-limit" placeholder="Enter daily calorie limit">
+        <button type="submit">Add Meal</button>
+      </form>
+    </div>
+  </div>
+  <script src="cal.js"></script>
+</body>
+</html>
